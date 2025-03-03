@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:">
+    <script src='./app.js' type='text/javascript'></script>
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgo=">
+  </head>
+  <body>
+    <h1>Demo CSP Issue</h1>
+    <form>
+      <input type="checkbox" id="enableFix" name="enableFix" checked>
+      <label for="enableFix">Enable Fix</label><br>
+    </form>
+    <iframe src="./iframe.html"></iframe>
+
+    <div>
+      <p id="hint"></p>
+      <br>
+      <a href="https://github.com/arberosmani/workaround-csp-frame-src-blocked-on-firefox">Github source</a>
+    </div>
+  </body>
+</html>

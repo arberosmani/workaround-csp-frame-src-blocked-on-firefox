@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        var content = ['<a id="a"><b id="b">Hello!</b></a>']
+        var blob = new Blob(content, {type : 'text/html'})
+        var blobURL = URL.createObjectURL(blob);
+
+        var a = document.createElement('a')
+        a.innerText = 'download.html'
+        a.setAttribute('href', blobURL)
+        a.setAttribute('download', 'download.html')
+        document.body.appendChild(a)
+      }, false);
+    </script>
+  </head>
+  <body>
+    <textarea>This is whithin the iframe</textarea>
+  </body>
+</html>
